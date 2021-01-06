@@ -1,8 +1,7 @@
 # ui.R
-# Author: Jeffrey M. Hunter
-# Date: 28-JUL-2019
-# Description: Shiny UI, Coursera Data Science Capstone Final Project
-# GitHub: https://github.com/oraclejavanet/coursera-data-science-capstone
+# Student:  Roxana Trejos Ramirez
+# Date: 06-JANL-2021
+# Description: Peer-graded Assignment: Final Project Submission
 
 library(shiny)
 library(shinythemes)
@@ -11,7 +10,7 @@ library(dplyr)
 library(tm)
 
 shinyUI(
-    navbarPage("Next Word Predict",
+    navbarPage("PREDICTION OF THE NEXT WORD",
                theme = shinytheme("spacelab"),
                tabPanel("Home",
                         fluidPage(
@@ -19,7 +18,7 @@ shinyUI(
                             sidebarLayout(
                                 sidebarPanel(
                                     textInput("userInput",
-                                              "Enter a word or phrase:",
+                                              "Word or Phrase to predict:",
                                               value =  "",
                                               placeholder = "Enter text here"),
                                     br(),
@@ -46,6 +45,13 @@ shinyUI(
                             based on text entered by a user.",
                             br(),
                             br(),
+                            "Next Word Prediction or what is also called Language 
+                            Modeling is the task of predicting what word comes next. 
+                            It is one of the fundamental tasks of NLP and has many
+                            applications. You might be using it daily when you write 
+                            texts or emails without realizing it",
+                            br(),
+                            br(),
                             "The predicted next word will be shown when the app
                             detects that you have finished typing one or more
                             words. When entering text, please allow a few
@@ -63,44 +69,27 @@ shinyUI(
                             br(),
                             br(),
                             img(src = "github.png"),
-                            a(target = "_blank", href = "https://github.com/oraclejavanet/coursera-data-science-capstone/tree/master/shiny-app/",
+                            a(target = "_blank", href = "https://github.com/roxtredev/dscfpfp/tree/main/shiny-app",
                             "Next Word Predict")),
                         br(),
                         h3("About Me"),
                         br(),
-                        div("My name is Jeffrey M. Hunter and I am a
-                            Senior Database Administrator and Application
-                            Programmer for ",
-                            a(target = "_blank", href = "https://www.dbazone.com/", "The DBA Zone, Inc."),".",
-                            "I am an Oracle Certified Professional, Oracle ACE
-                            and Author with over 25 years of experience working
-                            with Oracle, MySQL, MariaDB, MongoDB and PostgreSQL
-                            database technologies.",
-                            br(),
-                            br(),
-                            "My work includes advanced performance tuning, Java
-                            and PL/SQL programming, developing highly available
-                            database solutions, capacity planning, database
-                            security and physical / logical database design in a
-                            UNIX / Linux server environment.",
-                            br(),
-                            br(),
-                            "My other specialties include mathematics,
-                            developing statistical models, predictive analytics
-                            and statistical data analysis in R, Oracle R
-                            Enterprise, Oracle Data Miner and Python.",
-                            br(),
-                            br(),
-                            "I graduated from Stanislaus State University in
-                            Turlock California with a Bachelor's degree in
-                            Computer Science.",
+                        div("My name is Roxana Trejos.  Project manager for Information Technology
+                            Systems with 15 years of professional experience in planning and managing 
+                            the understanding of customer requirements, designing, negotiating, costing, 
+                            and materializing projects for different industries (Digital Marketing, 
+                            Recruitment, Logistics, and Finance). My colleagues would describe me as
+                            someone with strong people skills, connectedness, well organized, strong 
+                            builder trust and leadership. I'm seeking for opportunities that will allow
+                            me to develop technologies that enable and promote the digital transformation. 
+                            As a project manager, my specific fields of interest include digital marketing, data science, and fintech. ",
                             br(),
                             br(),
                             img(src = "linkedin.png"),
-                            a(target = "_blank", href="https://www.linkedin.com/in/oraclejavanet/", "OracleJavaNet"),
+                            a(target = "_blank", href = "https://www.linkedin.com/in/roxana-trejos/", "Here my linkedin"),
                             br(),
-                            img(src = "twitter.png"),
-                            a(target = "_blank", href="https://twitter.com/oraclejavanet/", "OracleJavaNet"))
+                            br()
+                            )
                )
     )
 )
