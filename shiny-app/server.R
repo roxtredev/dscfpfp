@@ -26,7 +26,6 @@ predictionMatch <- function(userInput, ngrams) {
                             userInput[length(userInput) - 1],
                             userInput[length(userInput)])
         dataTokens <- freq4ngram %>% filter(variable == userInput3)
-        ##dataTokens <- freq4ngram %>% filter(token == userInput3)
         if (nrow(dataTokens) >= 1) {
             return(dataTokens$outcome[1:3])
         }
@@ -38,7 +37,7 @@ predictionMatch <- function(userInput, ngrams) {
     if (ngrams == 3) {
         userInput1 <- paste(userInput[length(userInput)-1], userInput[length(userInput)])
         dataTokens <- freq3ngram %>% filter(variable == userInput1)
-        ##dataTokens <- freq3ngram %>% filter(token == userInput1)
+        
         if (nrow(dataTokens) >= 1) {
             return(dataTokens$outcome[1:3])
         }
@@ -50,7 +49,7 @@ predictionMatch <- function(userInput, ngrams) {
     if (ngrams < 3) {
         userInput1 <- userInput[length(userInput)]
         dataTokens <- freq2ngram %>% filter(variable == userInput1)
-        ##dataTokens <- freq2ngram %>% filter(token == userInput1)
+        
         return(dataTokens$outcome[1:3])
         # backoff (1-gram not implemented for enhanced performance)
         # return(match_predict(userInput, ngrams - 1))

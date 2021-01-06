@@ -1,0 +1,12 @@
+name: shiny-app
+title: shiny-app
+username:
+account: roxtrejos
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3446497
+bundleId: 4063043
+url: https://roxtrejos.shinyapps.io/shiny-app/
+when: 1609906736.75179
+asMultiple: FALSE
+asStatic: FALSE
